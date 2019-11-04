@@ -1,6 +1,5 @@
 package no.hvl.dat100.jplab12.oppgave4;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
@@ -15,8 +14,7 @@ public class SkrivBlogg {
 		PrintWriter skriver = null;
 
 		try {
-			File file = new File(MAPPE + filnavn);
-			skriver = new PrintWriter(file);
+			skriver = new PrintWriter(MAPPE+filnavn);
 			skriver.println(samling.toString());
 		}
 		catch (FileNotFoundException e) {
