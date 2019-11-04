@@ -19,17 +19,6 @@ public class Blogg {
 	}
 
 	public int getAntall() {
-		/*
-		for (int i = 0; i<itab.length; i++) {
-			if (itab[i]==null) {
-				if (i == 0) {
-					return nesteLedig;
-				}	
-				return i-1;
-			}
-		}
-		return nesteLedig;
-*/
 		return nesteLedig;
 	}
 	
