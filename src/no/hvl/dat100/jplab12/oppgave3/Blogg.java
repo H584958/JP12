@@ -64,6 +64,7 @@ public class Blogg {
 	}
 	
 	public String toString() {
+		search("tekst");
 		String str = getAntall()+"\n";
 		for (int i = 0; i<itab.length; i++) {
 					str += itab[i].toString();
@@ -80,9 +81,16 @@ public class Blogg {
 	}
 	
 	public boolean leggTilUtvid(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
-		
+		if (!finnes(innlegg)) {
+			if (!leggTil(innlegg)) {
+				utvid();
+				leggTil(innlegg);
+				return true;
+			}
+			leggTil(innlegg);
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean slett(Innlegg innlegg) {
@@ -104,9 +112,18 @@ public class Blogg {
 	}
 	
 	public int[] search(String keyword) {
-		
-		throw new UnsupportedOperationException(TODO.method());
-
+		//som returnere en tabell av id'er på alle innlegg i bloggen der teksten
+		//inneholder strengen angitt med parameteren ord.
+		String tekst;
+		for (int i = 0; i < itab.length; i++) {
+			tekst = itab[i].toString();
+			System.out.println(i + ": " + tekst);
+			//for (j = 0; j) {
+				
+			//}
+		}
+		int [] hufie = {1,2,3,4};
+		return hufie;
 	}
 	
 }
