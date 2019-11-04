@@ -53,7 +53,7 @@ public class Blogg {
 	}
 	
 	public String toString() {
-		search("tekst");
+		//search("tekst");
 		String str = getAntall()+"\n";
 		for (int i = 0; i<itab.length; i++) {
 					str += itab[i].toString();
@@ -71,7 +71,7 @@ public class Blogg {
 	
 	public boolean leggTilUtvid(Innlegg innlegg) {
 		if (!finnes(innlegg)) {
-			if (!leggTil(innlegg)) {
+			if (!ledigPlass()) {
 				utvid();
 				leggTil(innlegg);
 				return true;
@@ -106,7 +106,7 @@ public class Blogg {
 		String tekst;
 		for (int i = 0; i < itab.length; i++) {
 			tekst = itab[i].toString();
-			System.out.println(i + ": " + tekst);
+			//System.out.println(i + ": " + tekst);
 			//for (j = 0; j) {
 				
 			//}
