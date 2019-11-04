@@ -15,7 +15,7 @@ public abstract class Innlegg {
 	
 	public Innlegg(int id, String bruker, String dato) {
 
-		this.id = id ;
+		this.id = id;
 		this.bruker = bruker;
 		this.dato = dato;
 		this.likes = 0;
@@ -70,15 +70,9 @@ public abstract class Innlegg {
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		
-		boolean lik = false;
-		if(innlegg.id == this.id) {
-			lik = true;
-		}
-		
-		return lik;
-
+		return this.id == innlegg.id;
 	}
+	
 	@Override
 	public String toString() {
 		

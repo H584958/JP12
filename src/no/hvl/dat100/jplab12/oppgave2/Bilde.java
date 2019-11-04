@@ -29,7 +29,6 @@ public class Bilde extends Tekst {
 	public String toString() {
 
 		String str = "BILDE" + "\n"+ super.getId() + "\n" + super.getBruker() + "\n" + super.getDato() + "\n" + super.getLikes() + "\n" +super.getTekst() + "\n" +  this.url + "\n";
-		System.out.println(str);
 		return str;
 
 	}
