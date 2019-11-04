@@ -47,17 +47,11 @@ public class Blogg {
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		if (finnInnlegg(innlegg) < 0) {
-			return false;
-		} 
-		return true;
+		return (finnInnlegg(innlegg) >= 0);
 	}
 
 	public boolean ledigPlass() {
-		if (nesteLedig < getSamling().length) {
-			return true;
-		} 
-		return false;
+		return nesteLedig < getSamling().length;
 	}
 	
 	public boolean leggTil(Innlegg innlegg) {
